@@ -1,0 +1,7 @@
+type Query {
+    pointsList: [PointsView]
+}
+
+type Mutation {
+    addPoints(email: String, pontos: Int): PointsAdd
+}

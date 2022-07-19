@@ -1,0 +1,9 @@
+type PointsView {
+    email: String
+    pontos: Int
+}
+
+type PointsAdd {
+    email: String
+    pontos: Int
+}
