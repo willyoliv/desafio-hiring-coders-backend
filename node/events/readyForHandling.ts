@@ -46,7 +46,8 @@ export async function readyForHandlingEvent(
   })
 
   if(documento){
-    const novoPonto = documento[0].pontos + amountNumber
+    let pontosAnteriores = documento[0].pontos ? documento[0].pontos : 0
+    const novoPonto = pontosAnteriores + amountNumber
     await masterdata.createOrUpdateEntireDocument({
       dataEntity: DATA_ENTITY,
       fields: {
